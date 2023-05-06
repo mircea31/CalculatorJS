@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>
+            rec
+        </title>
+    </head>
+    <body>
+
+
+
+        <script>
+
+            
+
+            // let operator=prompt('operatorul: ');
+
+            // let nr1 = parseFloat(prompt('numarul1: '));
+            // let nr2 = parseFloat(prompt('numarul2: '));
+
+            // let result;
+
+        // using if...else if... else
+        // if (operator == '+') {
+        //     result = number1 + number2;
+        // }
+        // else if (operator == '-') {
+        //     result = number1 - number2;
+        // }
+        // else if (operator == '*') {
+        //     result = number1 * number2;
+        // }
+        // else {
+        //     result = number1 / number2;
+        // }
+
+        // console.log(`${number1} ${operator} ${number2} = ${result}`);
+
+            let nr1;
+            let nr2;
+            let operator;
+            let rezultat;
+            let apasare_tasta=0;
+            let s_d = false;
+
+            function tasta_plus(){
+                operator = "+";
+                s_d = true;
+                document.getElementById("oper").innerHTML="+";
+            }
+            function tasta_minus(){
+                operator = "-";
+                s_d = true;
+                document.getElementById("oper").innerHTML="-";
+            }
+            function tasta_inmultire(){
+                operator = "*";
+                s_d = true;
+                document.getElementById("oper").innerHTML="*";
+            }
+            function tasta_impartire(){
+                operator = "/";
+                s_d = true;
+                document.getElementById("oper").innerHTML="/";
+            }
+            // ------acum tastele-----
+            function tasta0(){
+                if(s_d==false){
+                    nr1=0;
+                    document.getElementById("prim_nr").innerHTML=nr1;
+                    
+                }
+                else{
+                    nr2=0;
+                    document.getElementById("doi_nr").innerHTML="0";
+                }
+            }
+            function tasta1(){
+                if(s_d==false){
+                    nr1=1;
+                    document.getElementById("prim_nr").innerHTML="1";
+                }
+                else{
+                    nr2=1;
+                    document.getElementById("doi_nr").innerHTML="1";
+                }
+            }
+            function tasta2(){
+                if(s_d==false){
+                    nr1=2;
+                    document.getElementById("prim_nr").innerHTML="2";
+                }
+                else{
+                    nr2=2;
+                    document.getElementById("doi_nr").innerHTML="2";
+                }
+            }
+            function tasta3(){
+                if(s_d==false){
+                    nr1=3;
+                    document.getElementById("prim_nr").innerHTML="3";
+                }
+                else{
+                    nr2=3;
+                    document.getElementById("doi_nr").innerHTML="3";
+                }
+            }
+            function tasta4(){
+                if(s_d==false){
+                    nr1=4;
+                    document.getElementById("prim_nr").innerHTML="4";
+                }
+                else{
+                    nr2=4;
+                    document.getElementById("doi_nr").innerHTML="4";
+                }
+            }
+            function tasta5(){
+                if(s_d == false){
+                    nr1 = 5;
+                    document.getElementById("prim_nr").innerHTML="5";
+                }
+                else{
+                    nr2=5;
+                    document.getElementById("doi_nr").innerHTML="5";
+                }
+            }
+            function tasta6(){
+                if(s_d==false){
+                    nr1=6;
+                    document.getElementById("prim_nr").innerHTML="6";
+                }
+                else{
+                    nr2=6;
+                    document.getElementById("doi_nr").innerHTML="6";
+                }
+            }
+            function tasta7(){
+                if(s_d==false){
+                    nr1=7;
+                    document.getElementById("prim_nr").innerHTML="7";
+                }
+                else{
+                    nr2=7;
+                    document.getElementById("doi_nr").innerHTML="7";
+                }
+            }
+            function tasta8(){
+                if(s_d==false){
+                    nr1=8;
+                    document.getElementById("prim_nr").innerHTML="8";
+                }
+                else{
+                    nr2=8;
+                    document.getElementById("doi_nr").innerHTML="8";
+                }
+            }
+            function tasta9(){
+                if(s_d==false){
+                    nr1=9;
+                    document.getElementById("prim_nr").innerHTML="9";
+                }
+                else{
+                    nr2=9;
+                    document.getElementById("doi_nr").innerHTML="9";
+                }
+            }
+            function tasta_egal(){
+                if(operator=="+"){
+                    rezultat = nr1 + nr2;
+                }
+                else if(operator=="-"){
+                    rezultat = nr1 - nr2;
+                }
+                else if(operator=="*"){
+                    rezultat = nr1 * nr2;
+                }
+                else{
+                    rezultat = nr1/nr2;
+                }
+
+                
+                document.getElementById("rez").innerHTML=rezultat;
+            }
+            function tasta_reset(){
+                document.getElementById("prim_nr").innerHTML="Primul numar este: ";
+                document.getElementById("oper").innerHTML="operatorul este: ";
+                document.getElementById("doi_nr").innerHTML="Al doilea numar este: ";
+                document.getElementById("rez").innerHTML="Rezultatul: ";
+                s_d=false;
+            }
+
+        </script>
+        
+        <h1 id="prim_nr">Primul numar este: </h1>
+        <h2 id="oper">Operatorul este: </h2>
+        <h1 id="doi_nr">Al doilea numar este: </h1>
+        <h1>=</h1>
+        <h2 id="rez">Rezultatul:</h2>
+
+        <table style="font-size: larger;">
+            <tr>
+                <th><h1 id="rezultat"> </h1></th>
+            </tr>
+            <tr>
+                <td><button type="button" onclick=tasta7()>7</button></td>
+                <td><button type="button" onclick=tasta8()>8</button></td>   
+                <td><button type="button" onclick=tasta9()>9</button></td>  
+                <td><button type="button" onclick=tasta_reset()>CA</button></td>  
+            <tr>
+                <td><button type="button" onclick=tasta4()>4</button></td>
+                <td><button type="button" onclick=tasta5()>5</button></td>
+                <td><button type="button" onclick=tasta6()>6</button></td>
+                <td><button type="button" onclick=tasta_impartire()>/</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick=tasta1()>1</button></td>
+                <td><button type="button" onclick=tasta2()>2</button></td>
+                <td><button type="button" onclick=tasta3()>3</button></td>
+                <td><button type="button" onclick=tasta_inmultire()>*</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" onclick=tasta0()>0</button></td>
+                <td><button type="button" onclick=tasta_plus()>+</button></td>
+                <td><button type="button" onclick=tasta_minus()>-</button></td>
+                <td><button type="button" onclick=tasta_egal()>=</button></td>
+            </tr>
+
+        </table>
+    </body>
+</html>
